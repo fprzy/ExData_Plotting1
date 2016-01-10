@@ -1,4 +1,4 @@
-## Loadinglarge dataset.
+## Loading large dataset.
 setwd("D:/privat/Coursera/DataSpecialization/Exploratory-Data-Analysis/Assignment-1")
 filename <- "./household_power_consumption.txt"
 power_data <- read.table(filename,
@@ -15,5 +15,4 @@ attach(sample)
 time_str <- paste(Date, Time)
 sample$DateTime <- strptime(time_str, "%d/%m/%Y %H:%M:%S")
 rownames(sample) <- 1:nrow(sample)
-dim(sample) # 2880   10
 attach(sample)
